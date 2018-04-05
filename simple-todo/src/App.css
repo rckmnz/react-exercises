@@ -1,33 +1,28 @@
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
-.App ol li {
-  font-size: 1.2em;
-  margin: 10px;
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
 
-.todo-input {
-  padding: 2px;
-  min-width: 250px;
-  min-height: 25px;
-  font-size: 1.2em;
-  margin: 10px;
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
 }
 
-.save-button {
-  font-size: 1.2em;
+.App-title {
+  font-size: 1.5em;
 }
 
-.todo-content {
-  width: 50%;
+.App-intro {
+  font-size: large;
 }
 
-@media (max-width: 700px) {
-  .todo-content {
-    width: 95%;
-  }
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
