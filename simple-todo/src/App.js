@@ -1,18 +1,41 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Todo from "./Todo";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { inputText: "", data: [] };
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>Simple Todo App</h1>
+        <form
+          onSubmit={e => {
+            e.preventDefault();
+            this.setState(prevState => {
+              prevState.data.push(prevState.inputText);
+              prevState.inputText = "";
+              return prevState;
+            });
+          }}
+        >
+          <input
+            type="text"
+            name="todo"
+            placeholder="What needs to be done."
+            value={this.state.inputText}
+            onChange={e => {
+              this.setState({ inputText: e.target.value });
+            }}
+          />
+          <input type="submit" name="add" value="Add Task" />
+        </form>
+        <div className="Todos">
+          <ul>
+            <Todo data={this.state.data} />
+          </ul>
+        </div>
       </div>
     );
   }
