@@ -1,5 +1,6 @@
 const recipes = [
   {
+    id: 1,
     title: "Chimichurri Tempeh",
     ingredients: [
       "8  ounces tempeh, sliced through the length once, then each 1/2 piece cut into fours.",
@@ -26,6 +27,7 @@ const recipes = [
     img: "chimichurri-tempeh.jpg",
   },
   {
+    id: 2,
     title: "Slow Cooker Butternut Squash Soup",
     ingredients: [
       "2 cups vegetable stock",
@@ -51,6 +53,7 @@ const recipes = [
     img: "butternut-squash-soup.jpg",
   },
   {
+    id: 3,
     title: "Chimichurri Tempeh",
     ingredients: [
       "8 ounces (227 g) tempeh (if GF, ensure gluten-free friendly)",

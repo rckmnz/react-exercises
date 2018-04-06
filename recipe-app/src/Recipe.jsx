@@ -4,8 +4,8 @@ import "./Recipe.css";
 
 function Recipe(props) {
   const { title, img } = props;
-  const ingredients = props.ingredients.map((ing, idx) => <li key={idx}>{ing}</li>);
-  const instructions = props.instructions.map((ins, idx) => <li key={idx}>{ins}</li>);
+  const ingredients = props.ingredients.map(ing => <li key={props.id}>{ing}</li>);
+  const instructions = props.instructions.map(ins => <li key={props.id}>{ins}</li>);
 
   return (
     <div className="recipe-card">
@@ -31,6 +31,7 @@ Recipe.defaultProps = {
 };
 
 Recipe.propTypes = {
+  id: propTypes.number.isRequired,
   title: propTypes.string,
   img: propTypes.string,
   ingredients: propTypes.arrayOf(propTypes.string),
