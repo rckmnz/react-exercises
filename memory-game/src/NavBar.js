@@ -6,7 +6,7 @@ class NavBar extends Component {
     return (
       <nav>
         <h1>Memory Game</h1>
-        <button>New Game</button>
+        <button>+</button>
       </nav>
     );
   }

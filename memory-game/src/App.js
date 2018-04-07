@@ -14,10 +14,10 @@ function shuffle(array) {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { shuffle(cardData) };
+    this.state = { cardData: shuffle(cardData) };
   }
   render() {
-    const Cardstate = {
+    const CardState = {
       HIDING: 0,
       SHOWING: 1,
       MATCHING: 2
