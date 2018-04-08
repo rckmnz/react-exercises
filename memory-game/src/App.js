@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <Card />
+        <Card cardData={this.state.carData}/>
       </div>
     );
   }

@@ -6,7 +6,7 @@ class NavBar extends Component {
     return (
       <nav>
         <h1>Memory Game</h1>
-        <button>+</button>
+        <button><i className="fas fa-sync-alt"></i></button>
       </nav>
     );
   }
