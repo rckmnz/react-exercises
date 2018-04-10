@@ -78,6 +78,16 @@ const cardData = [
     id: 15,
     cardState: 0,
     backgroundColor: "#FF9800"
+  },
+  {
+    id: 16,
+    cardState: 0,
+    backgroundColor: "#CDDC39"
+  },
+  {
+    id: 17,
+    cardState: 0,
+    backgroundColor: "#CDDC39"
   }
 ];
 
