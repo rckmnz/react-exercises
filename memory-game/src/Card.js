@@ -1,22 +1,19 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./App.css";
 
-class Card extends Component {
-  constructor(props) {
-    super(props)
-    this.handleClick = this.handleClick.bind(this);
+function Card(props) {
+  let style = {};
+  if (props.showing) {
+    style.backgroundColor = props.backgroundColor;
   }
-  handleClick(e) {
-    const card = e.target;
-    console.log(card);
-    this.props.onClick(card);
-   console.log(card.style = {backgroundColor: this.props.color})
-  }
-  render() {
-    return (
-      <div className="card" id={this.props.id} onClick={this.handleClick} color={this.props.color} state={this.props.state}/>
-    );
-  }
+  return <div onClick={props.onClick} className="card" style={style} />;
 }
+
+Card.propTypes = {
+  showing: PropTypes.bool.isRequired,
+  backgroundColor: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
+};
 
 export default Card;
